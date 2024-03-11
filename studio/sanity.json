@@ -4,7 +4,7 @@
     "name": "opensea-clone"
   },
   "api": {
-    "projectId": "e52g0t3k",
+    "projectId": "sanity project id here",
     "dataset": "production"
   },
   "plugins": [
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

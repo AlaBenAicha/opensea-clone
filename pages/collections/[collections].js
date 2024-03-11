@@ -1,14 +1,13 @@
-import React, { useEffect, useState, useMemo } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { useWeb3 } from '@3rdweb/hooks'
-import { client } from '../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
-import Header from '../../components/Header'
-import { CgWebsite } from 'react-icons/cg'
+import { useRouter } from 'next/router'
+import React, { useEffect, useMemo, useState } from 'react'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { CgWebsite } from 'react-icons/cg'
 import { HiDotsVertical } from 'react-icons/hi'
+import Header from '../../components/Header'
 import NFTCard from '../../components/NFTCard'
+import { client } from '../../lib/sanityClient'
 
 const style = {
   bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
@@ -47,7 +46,7 @@ const Collection = () => {
 
     const sdk = new ThirdwebSDK(
       provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/76Z76iMhbvAZIPErtQuHMlwmNbOmWmud'
+      'alchemy api key here'
     )
     return sdk.getNFTModule(collectionId)
   }, [provider])
